@@ -4,8 +4,11 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                var status = 2+2 > 3 ? 'True' : 'False'
-                echo status
+                script{
+                    def status = 2+2 > 3 ? 'True' : 'False'
+                    echo status
+                }
+
                 echo 'building..'
             }
         }
