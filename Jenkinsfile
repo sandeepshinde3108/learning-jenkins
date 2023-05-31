@@ -11,7 +11,7 @@ pipeline{
 
     parameters {
         choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: 'version choices')
-        booleanParam(name: 'EXEC_TESTS', defaultValue: true, description 'turn on or off tests')
+        booleanParam(name: 'EXEC_TESTS', defaultValue: true, description: 'turn on or off tests')
     }
 
     stages{
