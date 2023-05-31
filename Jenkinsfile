@@ -1,15 +1,15 @@
 pipeline{
     agent any
 
+    tools {
+        maven 'Maven-3.9.2'
+    }
+
     stages{
         stage('build'){
-            steps{
-                script{
-                    def status = 2+2 > 3 ? 'True' : 'False'
-                    echo status
-                }
-
+            steps {
                 echo 'building..'
+                sh 'mvn compile'
             }
         }
 
